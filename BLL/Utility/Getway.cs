@@ -2,7 +2,6 @@
 {
     public class Getway
     {
-        //forhad
         private static string _Mr_SpecFo;
         private static string _Dg_Payroll;
         public static string SpecFoCon
