@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreApiResponse" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.21" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.21" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\EmployeeImage\" />
+    <Folder Include="wwwroot\Employee_QRCode\" />
+    <Folder Include="wwwroot\EmployeeSignature\" />
+    <Folder Include="wwwroot\NomineeImage\" />
+    <Folder Include="wwwroot\TextFileUpload\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\Report\DataSet3.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Update="wwwroot\Report\DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Update="wwwroot\Report\Sal_Salarysheet_53.rdlc">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
